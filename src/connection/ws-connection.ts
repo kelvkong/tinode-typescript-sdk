@@ -48,7 +48,7 @@ export class WSConnection extends Connection {
                     this.backoffStop();
                 }
                 this.onOpen.next();
-                resolve();
+                resolve(null);
             }).bind(this);
 
             conn.onclose = (() => {

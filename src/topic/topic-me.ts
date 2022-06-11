@@ -395,8 +395,8 @@ export class TopicMe extends Topic {
      * Get access mode of a given contact from cache.
      */
     getAccessMode(): AccessMode {
-        if (name) {
-            const cont = this.contacts[name];
+        if (this.name) {
+            const cont = this.contacts[this.name];
             return cont ? cont.acs : null;
         }
         return this.acs;
